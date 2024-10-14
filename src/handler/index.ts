@@ -9,7 +9,7 @@ export default async function handler(
   context: Convo[],
   input: string
 ): Promise<string> {
-  const contextInput = context.map((c) => {
+  const contextInput: any = context.map((c) => {
     return {
       role: c.role,
       content: [{ type: "text", content: c.content }],
